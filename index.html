@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Alya & Rafi — Romantic Invitation</title>
+    
+    <!-- Meta Descriptions for SEO & Premium link previews -->
+    <meta name="description" content="A handcrafted digital love letter and dinner invitation, created with love by Rafi for Alya.">
+    <meta name="author" content="Rafi">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Great+Vibes&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Paper Grain Overlay -->
+    <div class="paper-grain"></div>
+
+    <!-- Background Ambient Glows -->
+    <div class="glow-orb glow-1"></div>
+    <div class="glow-orb glow-2"></div>
+
+    <!-- Floating Audio Control -->
+    <button id="audio-toggle" class="audio-control" aria-label="Toggle music player">
+        <span class="music-icon" role="img" aria-label="Music note">♪</span>
+        <span class="audio-label">♪ OFF</span>
+    </button>
+
+    <!-- PAGE 1: SEALED ENVELOPE SCREEN -->
+    <section id="envelope-screen" class="full-screen-container">
+        <div class="envelope-wrapper">
+            <p class="envelope-hint">A little something for you...</p>
+            
+            <div id="envelope" class="envelope">
+                <div class="envelope-flap"></div>
+                <div class="envelope-pocket"></div>
+                <div class="envelope-paper">
+                    <div class="mini-card">
+                        <span class="mini-card-text">Special Delivery</span>
+                    </div>
+                </div>
+                
+                <!-- Wax Seal -->
+                <div class="wax-seal" id="wax-seal">
+                    <div class="seal-inner">
+                        <span class="seal-initials">A &hearts; R</span>
+                    </div>
+                </div>
+            </div>
+            
+            <button id="open-btn" class="btn btn-primary" aria-label="Open letter">Open the letter</button>
+        </div>
+    </section>
+
+    <!-- PAGE 1 (PART 2): HAPPY BIRTHDAY & ANNIVERSARY GREETING -->
+    <section id="welcome-screen" class="full-screen-container hidden">
+        <div class="welcome-content reveal-on-scroll">
+            <h2 class="welcome-label">For You,</h2>
+            <h1 class="welcome-main-title">Happy Birthday</h1>
+            <span class="welcome-amp">&amp;</span>
+            <h1 class="welcome-main-title">Happy Anniversary, My Love</h1>
+            
+            <h2 class="welcome-recipient gf-name">Alya</h2>
+            <div class="divider-ornament">✦</div>
+            <p class="welcome-duration anniversary-num">2 Years of Us</p>
+            <p class="welcome-dates relationship-duration">3 September 2024 — 3 September 2026</p>
+            
+            <button id="start-reading-btn" class="btn btn-secondary reveal-on-scroll">Read my letter</button>
+        </div>
+    </section>
+
+    <!-- PAGE 2: THE LOVE LETTER EXPERIENCE (SCROLL CONTENT) -->
+    <main id="letter-experience" class="hidden">
+        
+        <!-- Header / My Love -->
+        <header class="letter-header section-container">
+            <span class="letter-date relationship-duration">3 September 2026</span>
+            <h1 class="salutation">My Love,</h1>
+            <p class="intro-text">
+                Hari ini adalah hari yang luar biasa spesial. Hari di mana aku tidak hanya merayakan bertambahnya usiamu, tapi juga merayakan dua tahun yang indah sejak kita memutuskan untuk berjalan bersama. Lewat halaman ini, aku ingin membawamu kembali ke beberapa ingatan manis kita...
+            </p>
+        </header>
+
+        <!-- Our Story -->
+        <section class="section-container">
+            <h2 class="section-title">Our Story</h2>
+            <div class="divider-line"></div>
+            
+            <div id="story-container" class="story-text-wrapper">
+                <!-- Populated dynamically by script.js -->
+            </div>
+        </section>
+
+        <!-- PHOTO 01 (Polaroid Style Carousel) -->
+        <section id="photo-1-section" class="photo-section section-container">
+            <div class="polaroid">
+                <div class="photo-carousel" data-slot="slot1">
+                    <div class="carousel-track-container">
+                        <ul class="carousel-track">
+                            <li class="carousel-slide current-slide">
+                                <div class="photo-wrapper">
+                                    <img id="photo-1-a-img" class="carousel-img" alt="Memory 1A">
+                                </div>
+                            </li>
+                            <li class="carousel-slide">
+                                <div class="photo-wrapper">
+                                    <img id="photo-1-b-img" class="carousel-img" alt="Memory 1B">
+                                </div>
+                            </li>
+                            <li class="carousel-slide">
+                                <div class="photo-wrapper">
+                                    <img id="photo-1-c-img" class="carousel-img" alt="Memory 1C">
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="carousel-btn btn-prev" aria-label="Sebelumnya">‹</button>
+                    <button class="carousel-btn btn-next" aria-label="Selanjutnya">›</button>
+                    <div class="carousel-nav">
+                        <span class="carousel-dot current-dot"></span>
+                        <span class="carousel-dot"></span>
+                        <span class="carousel-dot"></span>
+                    </div>
+                </div>
+                <div class="polaroid-caption">
+                    "Some ordinary days became my favorite memories because I spent them with you."
+                </div>
+            </div>
+        </section>
+
+        <!-- Things I Love About You -->
+        <section class="section-container">
+            <h2 class="section-title">Things I Love About You</h2>
+            <div class="divider-line"></div>
+            
+            <div id="things-love-container" class="editorial-list">
+                <!-- Populated dynamically by script.js -->
+            </div>
+        </section>
+
+        <!-- PHOTO 02 (Editorial Portrait Style Carousel) -->
+        <section id="photo-2-section" class="photo-section section-container">
+            <div class="editorial-photo">
+                <div class="photo-carousel" data-slot="slot2">
+                    <div class="carousel-track-container">
+                        <ul class="carousel-track">
+                            <li class="carousel-slide current-slide">
+                                <div class="photo-wrapper">
+                                    <img id="photo-2-a-img" class="carousel-img" alt="Memory 2A">
+                                </div>
+                            </li>
+                            <li class="carousel-slide">
+                                <div class="photo-wrapper">
+                                    <img id="photo-2-b-img" class="carousel-img" alt="Memory 2B">
+                                </div>
+                            </li>
+                            <li class="carousel-slide">
+                                <div class="photo-wrapper">
+                                    <img id="photo-2-c-img" class="carousel-img" alt="Memory 2C">
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="carousel-btn btn-prev" aria-label="Sebelumnya">‹</button>
+                    <button class="carousel-btn btn-next" aria-label="Selanjutnya">›</button>
+                    <div class="carousel-nav">
+                        <span class="carousel-dot current-dot"></span>
+                        <span class="carousel-dot"></span>
+                        <span class="carousel-dot"></span>
+                    </div>
+                </div>
+                <div class="editorial-caption">
+                    "This smile has always been one of my favorite things."
+                </div>
+            </div>
+        </section>
+
+        <!-- Things That Make Me Feel Loved -->
+        <section class="section-container">
+            <h2 class="section-title font-small">The Little Things That Make Me Feel Loved</h2>
+            <div class="divider-line"></div>
+            
+            <div id="things-feel-loved-container" class="editorial-list">
+                <!-- Populated dynamically by script.js -->
+            </div>
+        </section>
+
+        <!-- PHOTO 03 (Film Frame Style Carousel) -->
+        <section id="photo-3-section" class="photo-section section-container">
+            <div class="film-frame">
+                <div class="photo-carousel" data-slot="slot3">
+                    <div class="carousel-track-container">
+                        <ul class="carousel-track">
+                            <li class="carousel-slide current-slide">
+                                <div class="photo-wrapper">
+                                    <img id="photo-3-a-img" class="carousel-img" alt="Memory 3A">
+                                </div>
+                            </li>
+                            <li class="carousel-slide">
+                                <div class="photo-wrapper">
+                                    <img id="photo-3-b-img" class="carousel-img" alt="Memory 3B">
+                                </div>
+                            </li>
+                            <li class="carousel-slide">
+                                <div class="photo-wrapper">
+                                    <img id="photo-3-c-img" class="carousel-img" alt="Memory 3C">
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="carousel-btn btn-prev" aria-label="Sebelumnya">‹</button>
+                    <button class="carousel-btn btn-next" aria-label="Selanjutnya">›</button>
+                    <div class="carousel-nav">
+                        <span class="carousel-dot current-dot"></span>
+                        <span class="carousel-dot"></span>
+                        <span class="carousel-dot"></span>
+                    </div>
+                </div>
+                <div class="film-caption">
+                    <span>ROLL NO. 02</span>
+                    <span>3 SEPT</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- For Your New Chapter (Birthday Wish) -->
+        <section class="section-container relative-container">
+            <div class="bg-large-num reveal-on-scroll gf-age">24</div>
+            
+            <div class="wish-content-wrapper">
+                <h2 class="section-title">For Your New Chapter</h2>
+                <div class="divider-line"></div>
+                
+                <div id="birthday-wish-container" class="story-text-wrapper">
+                    <!-- Populated dynamically by script.js -->
+                </div>
+            </div>
+        </section>
+
+        <!-- PHOTO 04 (Vintage Frame Transition Style Carousel) -->
+        <section id="photo-4-section" class="photo-section section-container">
+            <div class="vintage-frame">
+                <div class="photo-carousel" data-slot="slot4">
+                    <div class="carousel-track-container">
+                        <ul class="carousel-track">
+                            <li class="carousel-slide current-slide">
+                                <div class="photo-wrapper">
+                                    <img id="photo-4-a-img" class="carousel-img" alt="Memory 4A">
+                                </div>
+                            </li>
+                            <li class="carousel-slide">
+                                <div class="photo-wrapper">
+                                    <img id="photo-4-b-img" class="carousel-img" alt="Memory 4B">
+                                </div>
+                            </li>
+                            <li class="carousel-slide">
+                                <div class="photo-wrapper">
+                                    <img id="photo-4-c-img" class="carousel-img" alt="Memory 4C">
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="carousel-btn btn-prev" aria-label="Sebelumnya">‹</button>
+                    <button class="carousel-btn btn-next" aria-label="Selanjutnya">›</button>
+                    <div class="carousel-nav">
+                        <span class="carousel-dot current-dot"></span>
+                        <span class="carousel-dot"></span>
+                        <span class="carousel-dot"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- And For Us (Relationship Wish) -->
+        <section class="section-container">
+            <h2 class="section-title">And For Us...</h2>
+            <div class="divider-line"></div>
+            
+            <div id="relationship-wish-container" class="story-text-wrapper">
+                <!-- Populated dynamically by script.js -->
+            </div>
+
+            <!-- Big Quote -->
+            <div class="big-quote reveal-on-scroll">
+                "I love you so much, <span class="gf-nickname">Sayang</span>."
+            </div>
+        </section>
+
+        <!-- PHOTO 05 (Final Cinematic Photo Style Carousel) -->
+        <section id="photo-5-section" class="photo-section section-container">
+            <div class="cinematic-photo">
+                <div class="photo-carousel" data-slot="slot5">
+                    <div class="carousel-track-container">
+                        <ul class="carousel-track">
+                            <li class="carousel-slide current-slide">
+                                <div class="photo-wrapper">
+                                    <img id="photo-5-a-img" class="carousel-img" alt="Memory 5A">
+                                </div>
+                            </li>
+                            <li class="carousel-slide">
+                                <div class="photo-wrapper">
+                                    <img id="photo-5-b-img" class="carousel-img" alt="Memory 5B">
+                                </div>
+                            </li>
+                            <li class="carousel-slide">
+                                <div class="photo-wrapper">
+                                    <img id="photo-5-c-img" class="carousel-img" alt="Memory 5C">
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="carousel-btn btn-prev" aria-label="Sebelumnya">‹</button>
+                    <button class="carousel-btn btn-next" aria-label="Selanjutnya">›</button>
+                    <div class="carousel-nav">
+                        <span class="carousel-dot current-dot"></span>
+                        <span class="carousel-dot"></span>
+                        <span class="carousel-dot"></span>
+                    </div>
+                </div>
+                <div class="cinematic-caption">
+                    "And I hope this is only the beginning of everything we still have to experience together."
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE 3: DINNER REVEAL TRANSITION -->
+        <section id="dinner-teaser" class="section-container dinner-teaser-section">
+            <div class="teaser-content reveal-on-scroll">
+                <p class="teaser-small-text">I've written enough...</p>
+                <p class="teaser-small-text font-serif">But there's still one more thing.</p>
+                
+                <h2 class="teaser-main-heading">An evening.</h2>
+                <h2 class="teaser-main-heading font-handwritten">Just for us.</h2>
+                
+                <p class="teaser-description">Because some moments deserve to be celebrated together.</p>
+                
+                <button id="reveal-dinner-btn" class="btn btn-dinner reveal-on-scroll">Reveal Our Evening</button>
+            </div>
+        </section>
+
+        <!-- PAGE 3 (PART 2): DINNER DETAILS (DARK BACKGROUND) -->
+        <section id="dinner-details-wrapper" class="dinner-details-section hidden-dinner">
+            <div class="dinner-card reveal-on-scroll">
+                <div class="dinner-card-border"></div>
+                
+                <span class="dinner-tag">Invitation</span>
+                <h2 class="dinner-title">An Evening For Us</h2>
+                <p class="dinner-subtitle">Just you and me.</p>
+                
+                <div class="dinner-divider">✦</div>
+                
+                <div class="dinner-info-grid">
+                    <div class="info-group">
+                        <span class="info-label">Restaurant</span>
+                        <span id="dinner-restaurant" class="info-val">TBD</span>
+                    </div>
+                    
+                    <div class="info-group">
+                        <span class="info-label">Date</span>
+                        <span id="dinner-date" class="info-val">TBD</span>
+                    </div>
+                    
+                    <div class="info-group">
+                        <span class="info-label">Time</span>
+                        <span id="dinner-time" class="info-val">TBD</span>
+                    </div>
+                    
+                    <div class="info-group">
+                        <span class="info-label">Dress Code</span>
+                        <span id="dinner-dress" class="info-val highlight">BLACK</span>
+                    </div>
+                </div>
+
+                <div class="dinner-actions">
+                    <a id="maps-btn" href="#" target="_blank" class="btn btn-gold btn-full">View Location</a>
+                    <p id="maps-msg" class="location-notice">Location will be revealed soon.</p>
+                </div>
+            </div>
+
+            <!-- FINAL LOVE MESSAGE -->
+            <footer class="final-message-container section-container">
+                <p class="final-sub">No matter where we go,</p>
+                <h2 class="final-heading">My favorite place</h2>
+                <h2 class="final-heading font-handwritten">will always be beside you.</h2>
+                
+                <p class="final-wish">Happy Birthday & Happy Anniversary, My Love.</p>
+                
+                <h1 class="final-name gf-name">Alya</h1>
+                
+                <span class="signature-line"></span>
+                <p class="final-sender">— <span class="bf-name">Rafi</span></p>
+                <p class="final-date relationship-duration">3 September 2026</p>
+            </footer>
+        </section>
+
+    </main>
+
+    <!-- SVG Noise for Vintage Paper Grain Texture -->
+    <svg class="svg-noise" xmlns="http://www.w3.org/2000/svg">
+        <filter id="paper-texture">
+            <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="3" stitchTiles="stitch" />
+            <feColorMatrix type="matrix" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.05 0" />
+            <feComposite operator="in" in2="SourceGraphic" />
+        </filter>
+    </svg>
+
+    <script src="script.js"></script>
+</body>
+</html>
